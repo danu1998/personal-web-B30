@@ -1,0 +1,110 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Contact Form</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="left">
+        <img
+          src="../assets/img/brandred.png"
+          alt="logo"
+          style="width: 50px; height: 50px"
+        />
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li><a href="../blog/blog.html">Blog</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <div class="form_container">
+      <form class="form_section">
+        <h2 class="title_form">Contact Form</h2>
+        <div>
+          <label for="input_nama" class="label_form">Name</label>
+          <input
+            id="input_nama"
+            type="text"
+            placeholder="Your Name"
+            class="input_form"
+          />
+        </div>
+
+        <div class="form_row">
+          <div>
+            <label for="input_email" class="label_form">Email</label>
+            <input
+              id="input_email"
+              type="email"
+              placeholder="Your Email"
+              class="input_form"
+            />
+          </div>
+
+          <div>
+            <label for="input_number" class="label_form">Phone Number</label>
+            <input
+              id="input_number"
+              type="number"
+              placeholder="Phone Number"
+              class="input_form"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="input_subject" class="label_form">Subject</label>
+          <select class="input_form" id="input_subject">
+            <option>Im Hiring</option>
+            <option>Privacy Policy</option>
+            <option>Problem with our site</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="input_area" class="label_form">Your Message</label>
+          <textarea
+            itemid="input_area"
+            cols="50"
+            rows="2"
+            id="input_area"
+            placeholder="Input Message"
+            class="input_area"
+          ></textarea>
+        </div>
+        <p class="text_form">Choose your skill</p>
+        <div class="check_form">
+          <div>
+            <input type="checkbox" id="html" value="HTML" />
+            <label for="">HTML</label>
+          </div>
+          <div>
+            <input type="checkbox" id="css" value="CSS" />
+            <label for="">CSS</label>
+          </div>
+          <div>
+            <input type="checkbox" id="javaScript" value="Javascript" />
+            <label for="">Javascript</label>
+          </div>
+        </div>
+
+        <button class="btn_form" type="button" onclick="submitData()">
+          <div class="col_send">
+            <i class="bx bx-mail-send icon_send"></i>Send to Email
+          </div>
+        </button>
+      </form>
+    </div>
+    <script src="../js/style.js"></script>
+  </body>
+</html>
