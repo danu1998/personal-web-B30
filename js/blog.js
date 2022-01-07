@@ -122,22 +122,26 @@ function getDistanceTime(time) {
 
   // konversi menjadi hari dalam 1 hari
 
-  let minutes = 60;
-  let seconds = 60;
-  let miliSecond = 1000; // 1 detik
-  let secondInHours = 3600; // detik dalam 1 jam
-  let hoursInDay = 23; // jam dalam 1 hari
+  let seconds = 60; //60 detik = 1 menit
+  let miliSecond = 1000; // 1000 milidetik = 1 detik
+  let secondInHours = 3600; // 3600 detik = 1 jam
+  let hoursInDay = 23; // 23 jam = 1 hari
 
+  // deklarasi perhitungan hari
   let distanceDay = Math.floor(
-    distance / (miliSecond * secondInHours * hoursInDay)
+    distance / (miliSecond * secondInHours * hoursInDay) // selisih waktu / 1000 * 3600 * 23
   );
 
+  // deklarasi perhitungan jam
   let distanceHours = Math.floor(
-    distance / (miliSecond * secondInHours * hoursInDay)
+    distance / (miliSecond * secondInHours) // selisih waktu / 1000 * 3600 * 23
   );
 
-  let distanceMinutes = Math.floor(distance / (miliSecond * seconds));
-  let distanceSeconds = Math.floor(distance / miliSecond);
+  // deklarasi perhitungan menit
+  let distanceMinutes = Math.floor(distance / (miliSecond * seconds)); // selisih waktu / 1000 * 60
+
+  // deklarasi perhitungan detik
+  let distanceSeconds = Math.floor(distance / miliSecond); // selisih waktu / 1000
 
   if (distanceDay >= 1) {
     return `${distanceDay} day ago`;
