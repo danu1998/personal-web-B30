@@ -7,6 +7,7 @@ function addBlog(e) {
   //membuat variable yang memanggil id input
   let title = document.getElementById("input-blog-title").value;
   let content = document.getElementById("input-blog-content").value;
+  let author = document.getElementById("input-blog-author").value;
   let image = document.getElementById("input-blog-image").files;
 
   // mengkonversi gambar
@@ -17,7 +18,7 @@ function addBlog(e) {
     title: title,
     content: content,
     image: image,
-    author: "Danu Prakoso",
+    author: author,
     createdDate: new Date(),
   };
 
@@ -55,7 +56,7 @@ function renderBlog() {
               >
             </h1>
             <div class="detail-blog-content">
-              ${getFullTime(blogs[i].createdDate)} | Ichsan Emrald Alamsyah
+              ${getFullTime(blogs[i].createdDate)} | ${blogs[i].author}
             </div>
             <p>
               ${blogs[i].content}
